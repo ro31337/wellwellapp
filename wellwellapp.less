@@ -1,0 +1,139 @@
+@board-background-color: #fff;
+@cell-border-color: #e0e0e0;
+@cell-border-size: 1px;
+@card-background-color: #f0f0f0;
+@card-border-size: 10px;
+/* @belongs-to-current-user-background-color: #fbefac; */
+@belongs-to-current-user-background-color: #f0f0f0;
+
+.cell-margin-bottom {
+  margin-bottom: 20px;
+}
+
+/* cell borders */
+
+.cell-right-border {
+  border-right: @cell-border-size solid @cell-border-color;
+}
+
+.cell-bottom-border {
+  border-bottom: @cell-border-size solid @cell-border-color;
+}
+
+.cell-left-border {
+  border-left: @cell-border-size solid @cell-border-color;
+}
+
+.cell-top-border {
+  border-top: @cell-border-size*2 solid @cell-border-color;
+}
+
+.cell-borders {
+  .cell-1 {
+    .cell-right-border;
+  }
+  .cell-2 {
+    .cell-left-border;
+  }
+  .cell-3 {
+    .cell-top-border;
+    .cell-right-border;
+  }
+  .cell-4 {
+    .cell-top-border;
+    .cell-left-border;
+  }  
+}
+
+/* card borders */
+
+.card-right-border {
+  /* border-right: @card-border-size solid @board-background-color; */
+  margin-right: @card-border-size;
+}
+
+.card-left-border {
+  /* border-left: @card-border-size solid @board-background-color; */
+  margin-left: @card-border-size;
+}
+
+.make-cols-the-same-height {
+  .row {
+    overflow: hidden; 
+  }
+
+  .cell {
+    margin-bottom: -99999px;
+    padding-bottom: 99999px;
+  }
+}
+
+/*screen-xs*/
+@media (max-width: 768px) {
+  .cell {
+    .cell-margin-bottom;
+    .card {
+      .card-right-border;
+      .card-left-border;
+    }
+  }
+}
+/*screen-sm*/
+@media (min-width: 768px) and (max-width: 992px) {
+  .cells {
+    .cell-borders;
+    .make-cols-the-same-height;
+  }
+}
+/*screen-md*/
+@media (min-width: 992px) and (max-width: 1200px) {
+  .cells {
+    .cell-borders;
+    .make-cols-the-same-height;
+  }
+}
+/*screen-lg*/
+@media (min-width: 1200px) {
+  .cells {
+    .cell-borders;
+    .make-cols-the-same-height;
+  }
+}
+
+.cell-1 .card .wrapper { .card-right-border; }
+.cell-2 .card .wrapper { .card-left-border; }
+.cell-3 .card .wrapper { .card-right-border; }
+.cell-4 .card .wrapper { .card-left-border; }
+
+.cell {
+  .card {
+    margin-bottom: 10px;
+    padding: 0;
+
+    .wrapper {
+      padding: 10px 15px 10px 15px;
+      background-color: @card-background-color;
+      word-wrap: break-word;
+    }
+
+    textarea {
+      background-color: @card-background-color;
+      padding: 0;
+      margin: 0;
+      border: none;
+      resize: none;
+      width: 100%;
+      outline: none;
+    }
+  }
+
+  .belongs-to-current-user {
+    .wrapper {
+      background-color: @belongs-to-current-user-background-color;
+      border: 1px dotted #66afe9;
+    }
+    textarea {
+      background-color: @belongs-to-current-user-background-color;
+    }
+  }
+}

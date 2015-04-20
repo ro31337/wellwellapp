@@ -1,0 +1,36 @@
+<template name = 'board'>
+  <div class="container cells">
+    <div class="row">
+      <!-- cell 1 -->
+      <div class="cell cell-1 col-xs-12 col-sm-6">
+        <h3>What went well</h3>
+        <div class="row">
+          {{> cards cell="1"}}
+        </div>
+      </div>
+      <!-- cell 2 -->
+      <div class="cell cell-2 col-xs-12 col-sm-6">
+        <h3>What didn't go well</h3>
+        <div class="row">
+          {{> cards cell="2"}}
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <!-- cell 3 -->
+      <div class="cell cell-3 col-xs-12 col-sm-6">
+        <h3>Thank you</h3>
+        <div class="row">
+          {{> cards cell="3"}}
+        </div>
+      </div>
+      <!-- cell 4 -->
+      <div class="cell cell-4 col-xs-12 col-sm-6">
+        <h3>Ways of improvement</h3>
+        <div class="row">
+          {{> cards cell="4"}}
+        </div>
+      </div>
+    </div>
+  </div>
+</template>

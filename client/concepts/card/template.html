@@ -1,0 +1,13 @@
+<template name="card">
+  {{#if isVisible}}
+    <div class="card col-sm-12 col-md-6 {{#if belongsToMe}}belongs-to-current-user{{/if}}">
+      <div class="wrapper">
+        {{#if belongsToMe}}
+          <textarea id="{{id}}" data-bind="value: currentBody, keyup: updateCard" placeholder="Start typing here..."></textarea>
+        {{else}}
+          <div>{{{formattedBody}}}</div>    
+        {{/if}}
+      </div>
+    </div>
+  {{/if}}
+</template>
