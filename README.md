@@ -30,7 +30,7 @@ After setting up, you can browse the application at:
 
 Deploy your application to meteor.com:
 
-    % meteor deploy http://your_app_name.meteor.com
+    meteor deploy http://your_app_name.meteor.com
 
 
 Guidelines
