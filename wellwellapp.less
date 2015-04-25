@@ -72,7 +72,7 @@
 @media (max-width: 768px) {
   .cell {
     .cell-margin-bottom;
-    .card {
+    .card .wrapper {
       .card-right-border;
       .card-left-border;
     }
@@ -80,30 +80,26 @@
 }
 /*screen-sm*/
 @media (min-width: 768px) and (max-width: 992px) {
-  .cells {
-    .cell-borders;
-    .make-cols-the-same-height;
-  }
 }
 /*screen-md*/
 @media (min-width: 992px) and (max-width: 1200px) {
-  .cells {
-    .cell-borders;
-    .make-cols-the-same-height;
-  }
 }
 /*screen-lg*/
 @media (min-width: 1200px) {
+}
+
+/* screen-sm and above */
+@media (min-width: 768px) {
   .cells {
     .cell-borders;
     .make-cols-the-same-height;
   }
-}
 
-.cell-1 .card .wrapper { .card-right-border; }
-.cell-2 .card .wrapper { .card-left-border; }
-.cell-3 .card .wrapper { .card-right-border; }
-.cell-4 .card .wrapper { .card-left-border; }
+  .cell-1 .card .wrapper { .card-right-border; }
+  .cell-2 .card .wrapper { .card-left-border; }
+  .cell-3 .card .wrapper { .card-right-border; }
+  .cell-4 .card .wrapper { .card-left-border; }
+}
 
 .cell {
   .card {
