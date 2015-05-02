@@ -1,8 +1,7 @@
 Template.card.events({
-  'focus textarea': function() {
+  'keydown textarea': function(event) {    
     Session.set('hasFocus', this._id);
-  },
-  'keydown textarea': function(event) {
+
     if(event.which === 8 || event.which === 46) {
       var selector = '#' + this._id;
       if($(selector).val() === '') {
