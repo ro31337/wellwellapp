@@ -1,6 +1,8 @@
 WellWellApp
 ===========
 
+![image](https://cloud.githubusercontent.com/assets/1477672/14923210/c47fa2ec-0df0-11e6-9480-af814e57d223.png)
+
 WellWellApp is dead simple project we use for feedback at the end of our sprints. The screen is devided into 4 parts:
 
 1. What went well
@@ -28,7 +30,7 @@ After setting up, you can browse the application at:
 
     % http://localhost:3000
 
-Deploy your application to meteor.com:
+Deploy your application to meteor.com (Update from April 2016 - Meteor.com doesn't have free hosting anymore):
 
     meteor deploy http://your_app_name.meteor.com
 
